@@ -1,60 +1,9 @@
-/* 全体のリセットとレイアウト */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
+// omikujiButtonがクリックされたとき
+document.getElementById("omikujiButton").addEventListener("click", function () {
+  // omikujiTitleをサンプルテキスト1に変更、omikujiDetailsをサンプルテキスト2に変更する
+  document.getElementById("omikujiTitle").textContent = "サンプルテキスト1";
+  document.getElementById("omikujiDetails").textContent = "サンプルテキスト2";
 
-body {
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
-}
-
-.hidden {
-  display: none;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-#omikuji {
-  border: 2px solid #333;
-  padding: 20px;
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
-}
-
-.button-container {
-  margin-top: 20px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
+  // postToXButtonボタンのhiddenを削除し、画面に表示させる
+  document.getElementById("postToXButton").classList.remove("hidden");
+});
